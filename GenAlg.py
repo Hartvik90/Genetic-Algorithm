@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+'''
+    File name: GenAlg.py
+    Author: Hartvik Line
+    Date created: 12/1/2018
+    Date last modified: 12/1/2018
+    Python Version: 3.6
+'''
+
 import string
 import random
 import math
@@ -69,7 +78,7 @@ while exit == False:
 ## ----- Plot final data -----
 GenAlg_Variation = len(string.ascii_uppercase)
 BruteForceTries = math.pow(len(string.ascii_uppercase), len(Solution))
-print('Tries if brute force method: ' + str(BruteForceTries))
+print('Nr of evaluations if brute force method: Up to ' + str(BruteForceTries))
 print('Number of evaluations with Gen.Alg.: ' + str(RunCounter))
-print('Method efficiency: Gen. Alg. is ' + str(
-    math.floor(BruteForceTries / RunCounter)) + ' times better than brute force')
+print('Method efficiency: Gen. Alg. up to ' + str(
+    math.floor(BruteForceTries / RunCounter)) + ' times better than brute force search')
