@@ -62,14 +62,14 @@ while exit == False:
             # Mutation
             if random.choice(list(range(1, math.floor((1 / MutationRate))))) == 1:
                 Son[j] = random.choice(string.ascii_uppercase)
-
-        RunCounter += 1
+        print(Son)
 
         Population[i] = ''.join(Son)
+        RunCounter += 1
 
-    # raw_input('Press Enter to continue...')
-    # print(['Average sucsessrate:',(numpy.mean(Performance)/len(Solution))*100,'%'])
-    # print(['Best sucsessrate:',(numpy.max(Performance)/len(Solution))*100,'%'])
+    print(['Average sucsessrate:',(numpy.mean(Performance)/len(Solution))*100,'%'])
+    print(['Best sucsessrate:',(numpy.max(Performance)/len(Solution))*100,'%'])
+    input("Press Enter to continue...")
 
     # Exit if one of the population have guessed the correct word
     if (numpy.max(Performance) / len(Solution)) * 100 == 100:
